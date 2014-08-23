@@ -1,0 +1,66 @@
+h2
+{
+    font-size:14pt;
+    font-weight:bold;
+	font-family:Futura-Medium;
+}
+h1{
+font-family:Futura-Medium;
+}
+
+#initializerArea{
+	position:relative;
+	display:block;
+	float:left;
+	padding:10px;
+	margin:0px;
+	width:525px;
+}
+#animationArea{
+	position:relative;
+	display:block; 
+	float:left;
+	padding-top:10px;
+	margin:0px;
+}
+fieldset{
+	width:140px;
+	height: 110px;
+	float:left;
+}
+a img{
+	border-width:0px;
+}
+
+#segregationVisualizer{
+	border: 4px solid black;
+}
+#btnRunSimulation{
+
+}
+.textbox{
+	width:50px;
+}
+.btn{
+	width:100px;
+	margin-left:5px;
+	margin-top:4px;
+}
+.buttonEnabled{
+	color: red;
+	font-weight:bold;
+}
+.buttonDisabled{
+	color: black;
+	font-weight:normal;
+}
+.note{
+	font-size:9pt;
+	color:red;
+	font-style:italic;
+}
+#chart_div{
+	float:left;
+	display:block;
+	width: 400px; height: 300px;
+}

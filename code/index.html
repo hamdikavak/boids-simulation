@@ -1,0 +1,70 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <link rel="stylesheet" href="style.css" type="text/css" media="screen">
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
+  <script type="text/javascript" src="http://www.google.com/jsapi"></script>
+  <script type="text/javascript" src="flocking.js"></script>
+  <title>Flocking Simulation</title>
+</head>
+<body>
+<h1 class="titleborder">Flocking Simulation</h1>
+<div class="content">
+		Flocking is a fascinating behavior that group of birds conducting while they are moving or foraging. Similar behavior is also seen in some other animals such as fishes and insects. Flocking has some advantages for birds. It improves foraging capacity and provides safety in numbers since they have more chance to recognize potential dangers such as predators (Terborgh, 2005). Flocking behavior seems like a complex behavior at a glance. But it is actually an emergent behavior that is based on a simple three rules; separation, alignment and cohesion. These  rules applied in a simulation first time by Craig Reynolds in 1985. He defined the rules as following way.<br><br>Separation: A bird should steer to avoid crowding local flockmates. <br>Alignment: A bird should steer average heading of the local flockmates and keep the same speed with them. <br>Cohesion: A bird should steer to move towards the average position of local flockmates.<br><br>This model implements these three rules to simulate flocking behavior. You can change environment size, population,  vision range and minimum separation parameters. Vision range is the radius size of the circular area around each bird. Birds can only see other birds within their vision range. Minimum separation is the  minimum length that two birds can get close to each other. When two birds get closer less than minimum separation length then separation rule supersedes the other two rules, otherwise alignment and cohesion rules are applied. Have fun!<hr>
+		<br>
+	</div>
+<div id="initializerArea">
+	<form>
+	  <fieldset>
+	    <legend> Environment </legend>
+	   
+	   Width <input type="text" id="cellWidth" value="500" class="textbox"/><br />
+	   Height <input type="text" id="cellHeigt" value="375" class="textbox"/><br />
+	   Population <input type="text" id="population" value="150" class="textbox"/><br/>
+	    
+	  </fieldset>
+	  <fieldset>
+	    <legend> Parameters </legend>
+	   
+	   Vision range <input type="text" id="visionRange" value="30" class="textbox"/><br />
+	   Minimum separation <input type="text" id="minSeperation" value="10" class="textbox"/><br />
+	    
+	  </fieldset>
+	  <!-- fieldset>
+	    <legend> Desired Similarity </legend>
+	    Green: <select id="desiredSimilarityType1">
+			  <option value="10">10</option>
+			  <option value="20">20</option>
+			  <option value="30">30</option>
+			  <option value="40">40</option>
+			  <option value="50">50</option>
+			  <option value="60">60</option>
+			  <option value="70">70</option>
+			  <option value="80">80</option>
+			  <option value="90">90</option>
+			  <option value="100">100</option>
+			</select><br>
+		Orange: <select id="desiredSimilarityType2">
+			  <option value="10">10</option>
+			  <option value="20">20</option>
+			  <option value="30">30</option>
+			  <option value="40">40</option>
+			  <option value="50">50</option>
+			  <option value="60">60</option>
+			  <option value="70">70</option>
+			  <option value="80">80</option>
+			  <option value="90">90</option>
+			  <option value="100">100</option>
+			</select>
+	  </fieldset-->
+	<input type="button" value="Initialize" id="btnInitSimulation" class="btn"/><br/> 
+	  <input type="button" id="btnRunSimulation" value="Run" class="btn" />
+	  <div id="animationArea">
+		<canvas id="flockingVisualizer"></canvas>
+		
+		</div>
+	</form>
+</div>
+
+</body>
+</html>
