@@ -1,4 +1,4 @@
-Flocking Simulation
+Boids (Flocking) Simulation
 ===================
 Check out online: http://www.hamdikavak.com/sims/flocking/
 
